@@ -1,0 +1,322 @@
+.editor-page {
+  padding: 24px 32px 32px 96px;
+}
+
+.editor-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.editor-dates {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.editor-heading h1 {
+  margin: 0;
+  color: #2d3485;
+  font-size: 30px;
+}
+
+.editor-back {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border: 1px solid #2d3485;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2d3485;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 包包之間橫向捲動 */
+.editor-boards {
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+/* 紫色包包區塊 */
+.bag-board {
+  flex-shrink: 0;
+  min-height: 520px;
+  padding: 16px;
+  border-radius: 18px;
+  background: #6565a6;
+}
+
+.bag-board-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 4px 16px;
+  color: #ffffff;
+}
+
+.bag-board-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.category-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* 每張白色分類卡 */
+.category-card {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.category-heading h3 {
+  margin: 0;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.category-count {
+  color: #777777;
+  font-size: 12px;
+}
+
+.category-more {
+  margin-left: auto;
+  color: #999999;
+}
+
+/* 物品列表 */
+.packing-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.packing-items li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.packing-items label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.packing-items input {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: #2d3485;
+}
+
+.packing-items label span {
+  overflow-wrap: anywhere;
+}
+
+.is-packed {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.remove-item,
+.add-item-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.remove-item:hover {
+  color: #2d3485;
+}
+
+.add-item-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-item-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: 14px;
+}
+
+.add-item-form input::placeholder {
+  color: #aaaaaa;
+}
+
+/* 編輯頁限制在導覽列下方的可用高度 */
+.editor-page {
+  box-sizing: border-box;
+  height: calc(100dvh - 60px);
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 24px 20px 96px;
+  overflow: hidden;
+}
+
+.editor-heading {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.editor-dates {
+  font-size: 14px;
+}
+
+.editor-heading h1 {
+  font-size: 26px;
+}
+
+/* 包包區域填滿剩餘高度，只向左右捲動 */
+.editor-boards {
+  flex: 1;
+  min-height: 0;
+  gap: 24px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+}
+
+/* 紫色包包框 */
+.bag-board {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+  padding: 14px;
+  border-radius: 16px;
+}
+
+.bag-board-heading {
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+.bag-board-heading h2 {
+  font-size: 18px;
+}
+
+.bag-board-heading svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* 分類卡片區 */
+.category-list {
+  flex: 1;
+  min-height: 0;
+  gap: 14px;
+}
+
+.category-card {
+  flex-shrink: 0;
+  width: 190px;
+  max-height: 100%;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.category-heading h3 {
+  font-size: 14px;
+}
+
+.packing-items label,
+.add-item-form input {
+  font-size: 14px;
+}
+
+.packing-items li {
+  margin-bottom: 10px;
+}
+.editor-heading h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.editor-title-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 星星放在標題左邊，日期與標題仍維持對齊 */
+.favorite-button {
+  position: absolute;
+  left: -30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+
+.favorite-button:hover,
+.favorite-button.is-favorite {
+  color: #2d3485;
+}
+.add-category-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #2d3485;
+
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.add-category-button:hover {
+  background-color: #e5e1dc;
+}

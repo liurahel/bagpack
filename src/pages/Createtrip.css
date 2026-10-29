@@ -1,0 +1,298 @@
+/* 彈出視窗 */
+.create-modal {
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 36px 40px 24px;
+  overflow-y: auto;
+
+  border: none;
+  border-radius: 22px;
+  background: #fffbf6;
+  color: #222222;
+  font: inherit;
+}
+
+/* 原生 dialog 的背景遮罩 */
+.create-modal::backdrop {
+  background: rgb(0 0 0 / 60%);
+}
+
+.create-modal button,
+.create-modal input,
+.create-modal select {
+  font: inherit;
+}
+
+.create-modal button {
+  cursor: pointer;
+}
+
+.create-modal-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.create-modal-heading h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.create-modal-heading p {
+  margin: 8px 0 0;
+  color: #777777;
+  font-size: 14px;
+}
+
+.create-skip {
+  flex-shrink: 0;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: #777777;
+  font-weight: 700 !important;
+}
+
+.create-modal-body {
+  max-width: 580px;
+  margin: 32px auto 0;
+  font-size: 14px;
+}
+
+.create-modal fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.create-modal legend {
+  margin-bottom: 10px;
+}
+
+.create-modal legend span {
+  color: #777777;
+}
+
+/* 打包目的 */
+.purpose-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.purpose-options button {
+  padding: 7px 13px;
+  border: 1px solid #2d3485;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2d3485;
+}
+
+.purpose-options button:hover {
+  background: #e5e1dc;
+}
+
+.purpose-options button.selected {
+  background: #2d3485;
+  color: #ffffff;
+}
+
+/* 行程規劃欄位 */
+.create-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 36px;
+  margin-top: 28px;
+}
+
+.create-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.create-field > input,
+.create-field > select,
+.personal-row > input,
+.personal-row > select {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 5px 8px;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #222222;
+}
+
+.create-dates {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 34px;
+  padding: 3px 5px;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.create-dates input {
+  width: 0;
+  min-width: 0;
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+}
+
+/* 個人化設定 */
+.personal-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.personal-avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #eeebe7;
+  color: #c5c1bb;
+}
+
+.personal-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.personal-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 180px);
+  align-items: center;
+  gap: 12px;
+}
+
+.personal-row > span {
+  text-align: right;
+}
+
+.personal-gender legend {
+  margin-bottom: 6px;
+}
+
+.check-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.check-options label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.check-options input {
+  margin: 0;
+  accent-color: #2d3485;
+}
+
+.personal-preferences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.other-option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.other-option input {
+  width: 0;
+  min-width: 0;
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #888888;
+  background: transparent;
+}
+
+.personal-note {
+  margin: 6px 0 0;
+  color: #777777;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* 底部按鈕 */
+.create-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.create-cancel {
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+  color: #777777;
+}
+
+.create-modal .create-step-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 9px 18px;
+
+  border: 2px solid #2d3485;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2d3485;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.create-modal .create-step-button.is-ready {
+  background: #2d3485;
+  color: #ffffff;
+}
+
+.create-modal .create-step-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+  .create-modal {
+    padding: 24px 20px;
+  }
+
+  .create-modal-heading h2 {
+    font-size: 22px;
+  }
+
+  .create-fields,
+  .personal-preferences {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

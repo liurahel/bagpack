@@ -1,5 +1,13 @@
+/* 讓元素設定寬高時，包含內距和邊框 */
+* {
+  box-sizing: border-box;
+}
+
+/* 我的網頁基本樣式 */
 body {
   margin: 0;
-  min-height: 100vh;
-  background-color: #FFFBF6;
+  background-color: #fffbf6;
+  color: #222222;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  font-size: 16px;
 }
